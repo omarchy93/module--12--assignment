@@ -6,8 +6,8 @@ import Button from "@/src/components/Button";
 
 const Contact = () => {
   const [formObj, setFormObj] = useState({
-    fname: "",
-    lname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     message: "",
   });
@@ -21,6 +21,7 @@ const Contact = () => {
 
   const formSubmit = (e) => {
     e.preventDefault();
+    alert(JSON.stringify(formObj));
   };
 
   return (
@@ -41,18 +42,18 @@ const Contact = () => {
         <form className="flex-1 flex flex-col gap-5" onSubmit={formSubmit}>
           <input
             onChange={(e) => {
-              inputChange("fname", e.target.value);
+              inputChange("firstName", e.target.value);
             }}
-            value={formObj.fname}
+            value={formObj.firstName}
             type="text"
             placeholder="First Name"
             className="p-3 bg-transparent outline-none border-[1px] border-solid border-gray-300 text-base font-semibold"
           />
           <input
             onChange={(e) => {
-              inputChange("lname", e.target.value);
+              inputChange("last", e.target.value);
             }}
-            value={formObj.lname}
+            value={formObj.last}
             type="text"
             placeholder="Last Name"
             className="p-3 bg-transparent outline-none border-[1px] border-solid border-gray-300 text-base font-semibold"
@@ -76,7 +77,12 @@ const Contact = () => {
             placeholder="message"
             className="p-3 bg-transparent outline-none border-[1px] border-solid border-gray-300 text-base font-semibold "
           ></textarea>
-          <Button type="submit" url="#" text="Submit" />
+          <button
+            className="border-none px-5 py-3 bg-gradient-to-b from-green-500 to-gray-300 rounded-md text-slate-800 max-w-max hover:"
+            type="submit"
+          >
+            Send
+          </button>
         </form>
       </div>
     </div>
