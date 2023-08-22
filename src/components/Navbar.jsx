@@ -35,7 +35,7 @@ const Navber = () => {
           className="font-bold text-2xl bg-gradient-to-r from-green-500 to-gray-300 bg-clip-text text-transparent"
           href="/"
         >
-          Limamia
+          Blog
         </Link>
       </div>
 

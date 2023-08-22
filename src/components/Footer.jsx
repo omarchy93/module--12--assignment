@@ -7,7 +7,7 @@ const Footer = () => {
       <div>
         <h1 className="bg-gradient-to-b from-green-500 to-gray-300 bg-clip-text text-transparent">
           {" "}
-          &copy; All right reserved limamia{" "}
+          &copy; All right reserved{" "}
         </h1>
       </div>
       <div className="flex items-center gap-2">
