@@ -3,7 +3,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/:path*",
+        source: "/",
         headers: [
           {
             key: "X-Frame-Options",
@@ -13,9 +13,9 @@ const nextConfig = {
       },
     ];
   },
-  distDir: "build",
+  // distDir: "build",
   images: {
-    domains: ["basic-blog.teamrabbil.com", "roar.media"],
+    domains: ["basic-blog.teamrabbil.com", "roar.media", "images.pexels.com"],
   },
 };
 
